@@ -55,15 +55,15 @@ $(document).ready(function() {
 
   $(".project_navigtaion_container").mouseenter(function(e){
     $(this).addClass("init_hover")
-    $('.inner_slide_container.active').foggy({
-      blurRadius: 3,          // In pixels.
-      opacity: 1,           // Falls back to a filter for IE.
-      cssFilterSupport: true  // Use "-webkit-filter" where available.
-    }); 
+    // $('.inner_slide_container.active').foggy({
+    //   blurRadius: 3,          // In pixels.
+    //   opacity: 1,           // Falls back to a filter for IE.
+    //   cssFilterSupport: true  // Use "-webkit-filter" where available.
+    // }); 
   });
   $(".project_navigtaion_container").mouseleave(function(e){
     $(this).removeClass("init_hover")
-     $('.inner_slide_container.active').foggy(false);
+     // $('.inner_slide_container.active').foggy(false);
   });
 
   // $('.project_navigtaion_container').blurjs({

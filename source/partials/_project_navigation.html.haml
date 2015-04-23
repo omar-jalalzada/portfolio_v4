@@ -1,4 +1,5 @@
-%nav{:class => "#{active_class} project_navigtaion_container"}
+%nav{:class => "#{active_class} project_navigtaion_container"} 
+  //.init_hover
   .icon_container
   %ul
 
@@ -38,21 +39,17 @@
           .client_name AFV
           .project_name Android App
         .hover
-    / %li
-    /   =link_to '/projects/summary.html', :class =>'project_links summary' do
-    /     .icon
-    /     .text Project Summary
-    /     .hover
 
     %li
       =link_to '/', :class =>'project_links bio' do
-        / .thumb_container
-        /   .thumb_bottom_shadow
-        /   .thumb_image
+        .thumb_container
+          / .thumb_bottom_shadow
+          .thumb_image
+            .bio
         .text
           .dash
-          .client_name &#8592;
-          .project_name Back to Bio
+          .client_name Back to Bio
+          / .project_name &#8592;
         .hover
 
     %li
