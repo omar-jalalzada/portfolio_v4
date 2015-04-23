@@ -1,0 +1,36 @@
+.projects_moovweb
+  .slide_1
+    .inner_slide_container
+      .moovweb_main
+        max-width: $custom_max_width
+        margin: 0 auto
+        .moovweb_macbook_mock
+          width: 800px
+          height: 460px
+          +background-image(image-url("moovweb/main_moovweb_site.png"))
+          background-repeat: no-repeat
+          background-size: 100%
+          margin: auto
+  .slide_2
+    +background-image(image-url("moovweb/cover_bg.jpg"))
+  .slide_3
+    .pdf_link_module_container .pdf_sample
+      +background-image(image-url("moovweb/brand/brand_thumb.png"))
+
+  .slide_4
+    .main_browser_display
+      a.browser
+        +background-image(image-url("moovweb/corp_site/corporate_site_thumb.jpg"))
+  .slide_5
+    .inner_slide_container
+      #harlemshake_video
+        width: 600px
+        height: 380px
+        margin: auto
+        border: 1px solid $oj_light_grey
+        +border-radius($base_border_radius)
+        overflow: hidden
+        max-width: 1100px
+        +background(image-url("fancy/loading_spinner_v2.gif"))  
+  .slide_6
+    +background-image(image-url("moovweb/end_cover_bg.jpg"))

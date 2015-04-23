@@ -1,0 +1,298 @@
+// .inner_slide_container.active
+//   +transition-property(all)
+//   +transition-timing-function($custom_ease)
+//   +transition-duration(.3s)
+//   // +transition-delay(.4s)
+
+.project_navigtaion_container
+  width: 60px
+  height: 60px
+  position: fixed
+  bottom: 20px
+  left: 20px
+  z-index: 9999999
+  overflow: hidden
+  +border-radius(40px)
+  // background-color: $oj_blue
+  .icon_container
+    width: 58px
+    height: 58px
+    
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: 700
+    +border-radius(50%)
+    +transition-property(all)
+    +transition-duration(.3s)
+    +transition-timing-function($custom_ease)
+    +scale(1)
+    background-repeat: no-repeat
+    background-size: 180px 30px
+    background-position: 15px
+    +background-image(image-url("ui_elements/social_bio_icons.png"))
+    background-color: $oj_blue
+    // border: 1px solid rgba(250,250,250,1)
+    // +box-shadow(0 0 2px 2px rgba(0,0,0,0.4))
+
+
+  ul
+    li
+      a
+        // width: 200px
+        // height: 300px
+        +box-sizing(border-box)
+        display: block
+        font-weight: bold
+        // border: 1px solid red
+        position: relative
+        background-color: rgba($oj_blue, .9)
+        opacity: 0
+        overflow: hidden
+        +transition-property(transform, width, opacity, scale)
+        +transition-duration(.2s)
+        +transition-timing-function($custom_ease)
+        // +transition-delay(0)
+        +transform(translateX(-5px) scale(0.8))
+        // +translateX(-5px)
+        // +scale(.6)
+
+        // &:hover
+        //   .hover
+        //     width: 100%
+        //     height: 100%
+        //     background-color: #ddd
+        //     position: absolute
+        //     top: 0
+        //     right: 0
+        //     z-index: 8000
+        //     opacity: 1
+        //     +transition-property(background-color)
+        //     +transition-duration(.3s)
+        //     +transition-timing-function($custom_ease)
+        .text
+          // position: absolute
+          // top: 30px
+          // left: 80px
+          height: 40px
+          // z-index: 9000
+          text-align: center
+          & > *
+            // noooooooOOiOioi2039u790w8740982734098
+            +transition-property(transform, opacity)
+            +translateY(-15px)
+            +transition-timing-function(cubic-bezier(0.175, 0.885, 0.570, 1.650))
+            +transition-duration(.2s)
+            opacity: 0
+          .dash
+            width: 40px
+            height: 4px
+            margin: 20px auto 10px
+            background-color: $oj_grey
+          .client_name
+            font-weight: bold
+            color: $oj_red
+            color: #fff
+            text-transform: uppercase
+            font-size: 18px
+          .project_name
+            font-size: 14px
+            font-weight: 100
+            color: #eee
+        .thumb_container
+          width: 100%
+          height: 260px
+          // background-color: #aaa
+          // border: 1px solid green
+          overflow: hidden
+          // position: absolute
+          // top: 20px
+          // left: 20px
+          // z-index: 9000
+          
+          // +border-radius(50%)
+          position: relative
+          background-repeat: no-repeat
+          background-size: 100%
+
+          .thumb_bottom_shadow
+            width: 100%
+            height: 32px
+            position: absolute
+            bottom: 0
+            left: 0
+            +background-image(image-url("nav/nav_thumb_bottom_shadow.png"))
+            background-repeat: no-repeat
+          .thumb_image
+            width: 100%
+            height: 100%
+            // background-color: red
+            opacity: 0
+            +transition-property(transform, opacity)
+            +translateY(50px)
+            +transition-timing-function($custom_ease)
+            +transition-duration(.2s)
+            
+            & > div
+              background-size: 100%
+              background-repeat: no-repeat
+              width: 100%
+              height: 100%
+              +transition-timing-function($custom_ease)
+              +transition-duration(.2s)
+              &.macys
+                +background-image(image-url("nav/macys_nav_thumb.png"))
+              &.arc
+                +background-image(image-url("nav/arc_nav_thumb.png"))
+              &.afv
+                +background-image(image-url("nav/afv_nav_thumb.png"))
+              &.sfmoma
+                +background-image(image-url("nav/sfmoma_nav_thumb.png"))
+              &.moovweb
+                +background-image(image-url("nav/moovweb_nav_thumb.png"))
+
+        &.bio
+          // +translateX(0px)
+          // background-color: #ddd
+        &.summary
+          .icon 
+            +background-image(image-url("ui_elements/omar_jalalzada.jpeg"))
+
+
+  ///--------- HOVER HOVER HOVER -------////
+  &.init_hover
+    width: 900px
+    height: 720px
+    +border-radius(6px)
+    overflow: hidden
+    // +box-shadow(0 0px 2px rgba(0,0,0,0.5), 0 3px 6px rgba(0,0,0,0.4))
+    .icon_container
+      width: 200px
+      height: 300px
+      opacity: 0
+      z-index: 0000
+      +border-radius(0)
+      +background-image(none)
+    ul
+      li
+        a
+          width: 300px
+          height: 360px
+          &.moovweb, &.bio, &.sfmoma
+            height: 280px
+            border: 1px solid red
+            .thumb_container
+              height: 180px
+              border: 1px solid gold
+          opacity: 1
+          // +scale(1)
+          // +translateX(0px)
+          +transform(translateX(0px) scale(1))
+          float: left
+          // hover when open
+          &:hover
+            .thumb_container 
+              .thumb_image div
+                background-position-y: -20px
+            // .text
+            //   .dash
+            //     background-color: darken($oj_grey, 10%)
+            //   .client_name
+            //     color: darken($oj_grey, 10%)
+            //   .project_name
+
+          .thumb_container 
+            .thumb_image
+              opacity: 1
+              +translateY(0px)
+          .text
+            & > *
+              +translateY(0px)
+              opacity: 1
+          
+          &.bio
+            // background-color: $oj_blue
+            .thumb_container 
+              .thumb_image
+                +transition-delay(.1s)
+            .text
+              .dash
+                +transition-delay(.15s)
+              .client_name
+                +transition-delay(.2s)
+              .project_name
+                +transition-delay(.25s)
+
+          &.macys
+            +transition-delay(.1s)
+            .thumb_container 
+              .thumb_image
+                +transition-delay(.2s)
+            .text
+              .dash
+                +transition-delay(.25s)
+              .client_name
+                +transition-delay(.3s)
+              .project_name
+                +transition-delay(.35s)
+
+          &.sfmoma
+            +transition-delay(.2s)
+            .thumb_container 
+              .thumb_image
+                +transition-delay(.3s)
+            .text
+              .dash
+                +transition-delay(.35s)
+              .client_name
+                +transition-delay(.4s)
+              .project_name
+                +transition-delay(.45s)
+          
+          &.arc
+            +transition-delay(.3s)
+            .thumb_container 
+              .thumb_image
+                +transition-delay(.4s)
+            .text
+              .dash
+                +transition-delay(.45s)
+              .client_name
+                +transition-delay(.5s)
+              .project_name
+                +transition-delay(.55s)
+
+          &.moovweb
+            +transition-delay(.4s)
+            .thumb_container 
+              .thumb_image
+                +transition-delay(.5s)
+            .text
+              .dash
+                +transition-delay(.55s)
+              .client_name
+                +transition-delay(.6s)
+              .project_name
+                +transition-delay(.65s)
+
+          &.afv
+            +transition-delay(.5s)
+            .thumb_container 
+              .thumb_image
+                +transition-delay(.6s)
+            .text
+              .dash
+                +transition-delay(.65s)
+              .client_name
+                +transition-delay(.7s)
+              .project_name
+                +transition-delay(.75s)
+
+
+  // &.moovweb .moovweb, &.afv .afv, &.arc .arc, &.sfmoma .sfmoma, &.macys .macys 
+  //   background-color: #eee
+  //   .text, .thumb_container
+  //     opacity: .3
+  //   .hover
+  //     display: none !important
+  
